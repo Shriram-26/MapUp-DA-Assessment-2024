@@ -4,6 +4,7 @@ import pandas as pd
 
 
 #Q1
+from typing import List
 def reverse_by_n_elements(lst: List[int], n: int) -> List[int]:
     """
     Reverses the input list by groups of n elements.
@@ -18,6 +19,7 @@ def reverse_by_n_elements(lst: List[int], n: int) -> List[int]:
 ​
 ​
 ​#Q2
+from typing import List, Dict
 def group_by_length(lst: List[str]) -> Dict[int, List[str]]:
     """
     Groups the strings by their length and returns a dictionary.
@@ -34,6 +36,7 @@ def group_by_length(lst: List[str]) -> Dict[int, List[str]]:
 ​
 ​
 ​#Q3
+from typing import Dict
 def flatten_dict(nested_dict: Dict, sep: str = '.') -> Dict:
     """
     Flattens a nested dictionary into a single-level dictionary with dot notation for keys.
@@ -59,6 +62,7 @@ def flatten_dict(nested_dict: Dict, sep: str = '.') -> Dict:
 ​
 ​
 #Q4​
+from typing import List
 def unique_permutations(nums: List[int]) -> List[List[int]]:
     """
     Generate all unique permutations of a list that may contain duplicates.
@@ -86,6 +90,8 @@ def unique_permutations(nums: List[int]) -> List[List[int]]:
 ​
 ​
 ​#Q5
+import re
+from typing import List
 def find_all_dates(text: str) -> List[str]:
     """
     This function takes a string as input and returns a list of valid dates
@@ -154,6 +160,7 @@ def polyline_to_dataframe(polyline_str: str) -> pd.DataFrame:
 ​
 ​
 #Q7​
+from typing import List
 def rotate_and_transform_matrix(matrix: List[List[int]]) -> List[List[int]]:
     """
     Rotate the given matrix by 90 degrees clockwise, then replace each element
@@ -188,8 +195,8 @@ def rotate_and_transform_matrix(matrix: List[List[int]]) -> List[List[int]]:
 ​
 ​#Q8
 import pandas as pd
-​
-df = pd.read_csv('dataset-1.csv')
+​df = pd.read_csv('dataset-1.csv')
+
 date_format = "%Y-%m-%d" 
 time_format = "%H:%M:%S" 
 ​
