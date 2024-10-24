@@ -3,7 +3,7 @@ from typing import Dict, List
 import pandas as pd
 
 
-
+#Q1
 def reverse_by_n_elements(lst: List[int], n: int) -> List[int]:
     """
     Reverses the input list by groups of n elements.
@@ -17,7 +17,7 @@ def reverse_by_n_elements(lst: List[int], n: int) -> List[int]:
     return result
 ​
 ​
-​
+​#Q2
 def group_by_length(lst: List[str]) -> Dict[int, List[str]]:
     """
     Groups the strings by their length and returns a dictionary.
@@ -33,7 +33,7 @@ def group_by_length(lst: List[str]) -> Dict[int, List[str]]:
     return dict(sorted(length_dict.items()))
 ​
 ​
-​
+​#Q3
 def flatten_dict(nested_dict: Dict, sep: str = '.') -> Dict:
     """
     Flattens a nested dictionary into a single-level dictionary with dot notation for keys.
@@ -58,7 +58,7 @@ def flatten_dict(nested_dict: Dict, sep: str = '.') -> Dict:
     return flatten_helper(nested_dict)
 ​
 ​
-​
+#Q4​
 def unique_permutations(nums: List[int]) -> List[List[int]]:
     """
     Generate all unique permutations of a list that may contain duplicates.
@@ -85,7 +85,7 @@ def unique_permutations(nums: List[int]) -> List[List[int]]:
     return result
 ​
 ​
-​
+​#Q5
 def find_all_dates(text: str) -> List[str]:
     """
     This function takes a string as input and returns a list of valid dates
@@ -110,7 +110,7 @@ def find_all_dates(text: str) -> List[str]:
     return matches
 ​
 ​
-​
+#Q6​
 def haversine(lat1, lon1, lat2, lon2):
     """
     Calculate the Haversine distance between two points on the earth (specified in decimal degrees).
@@ -149,7 +149,7 @@ def polyline_to_dataframe(polyline_str: str) -> pd.DataFrame:
     return df
 ​
 ​
-​
+#Q7​
 def rotate_and_transform_matrix(matrix: List[List[int]]) -> List[List[int]]:
     """
     Rotate the given matrix by 90 degrees clockwise, then replace each element
@@ -182,7 +182,7 @@ def rotate_and_transform_matrix(matrix: List[List[int]]) -> List[List[int]]:
     return final_matrix
 ​
 ​
-​
+​#Q8
 import pandas as pd
 ​
 df = pd.read_csv('dataset-1.csv')
