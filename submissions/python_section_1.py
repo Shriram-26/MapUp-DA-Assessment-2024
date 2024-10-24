@@ -16,6 +16,10 @@ def reverse_by_n_elements(lst: List[int], n: int) -> List[int]:
             group.insert(0, lst[i + j])
         result.extend(group)
     return result
+
+print(reverse_by_n([1, 2, 3, 4, 5, 6, 7, 8], 3)) 
+print(reverse_by_n([1, 2, 3, 4, 5], 2))           
+print(reverse_by_n([10, 20, 30, 40, 50, 60, 70], 4))  
 ​
 ​
 ​#Q2
@@ -33,6 +37,12 @@ def group_by_length(lst: List[str]) -> Dict[int, List[str]]:
         length_dict[length].append(string)
     
     return dict(sorted(length_dict.items()))
+
+lst1 = ["apple", "bat", "car", "elephant", "dog", "bear"]
+lst2 = ["one", "two", "three", "four"]
+
+print(group_by_length(lst1))  
+print(group_by_length(lst2)) 
 ​
 ​
 ​#Q3
@@ -59,6 +69,25 @@ def flatten_dict(nested_dict: Dict, sep: str = '.') -> Dict:
         return flat_dict
 ​
     return flatten_helper(nested_dict)
+
+nested_dict = {
+     "road": {
+         "name": "Highway 1",
+         "length": 350,
+         "sections": [
+              {
+                 "id": 1,
+                   "condition": {
+                      "pavement": "good",
+                      "traffic": "moderate"
+                   }
+             }
+        ]
+     }
+ }
+
+flattened_dict = flatten_dict(nested_dict)
+print(flattened_dict)
 ​
 ​
 #Q4​
@@ -87,6 +116,10 @@ def unique_permutations(nums: List[int]) -> List[List[int]]:
     result = []
     backtrack(0)
     return result
+
+input_nums = [1, 1, 2]
+output = unique_permutations(input_nums)
+print(output)
 ​
 ​
 ​#Q5
@@ -114,6 +147,9 @@ def find_all_dates(text: str) -> List[str]:
     matches = re.findall(combined_pattern, text)
     
     return matches
+
+text = "I was born on 23-08-1994, my friend on 08/23/1994, and another one on 1994.08.23."
+print(find_all_dates(text))
 ​
 ​
 #Q6​
@@ -157,6 +193,11 @@ def polyline_to_dataframe(polyline_str: str) -> pd.DataFrame:
         df.loc[i, 'distance'] = haversine(lat1, lon1, lat2, lon2)
 ​
     return df
+
+if __name__ == "__main__":
+    polyline_str = "_p~iF~ps|U_ulLnnqC_mqNvxq`@"
+    df = polyline_to_dataframe(polyline_str)
+    print(df)
 ​
 ​
 #Q7​
@@ -192,6 +233,14 @@ def rotate_and_transform_matrix(matrix: List[List[int]]) -> List[List[int]]:
 ​
     return final_matrix
 ​
+matrix = [
+     [1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]    ]
+    
+final_matrix = rotate_and_transform_matrix(matrix)
+
+print(f"final_matrix = {final_matrix}")
 ​
 ​#Q8
 import pandas as pd
